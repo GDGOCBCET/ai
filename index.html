@@ -118,6 +118,14 @@ let conversationHistory = [];
 
 const SYSTEM_PROMPT = `You are a specialized AI Image Editing Assistant. You help users understand how to perform image edits using tools like PIL/Pillow, OpenCV, Stable Diffusion, ComfyUI, and similar pipelines.
 
+CONTENT MODERATION RULES — strictly enforce these at all times:
+- Refuse any request to generate, modify, or describe sexually explicit content
+- Refuse any request involving minors in inappropriate contexts
+- Refuse requests to create non-consensual intimate imagery or deepfakes of real people
+- Refuse requests to generate hateful, violent, or harmful imagery
+- Refuse requests to create misleading or deceptive media intended to harm
+- If a request violates these rules, explain briefly why and offer a legitimate alternative if possible
+
 For legitimate editing requests, your job is to:
 1. Analyze the user's request and identify the exact image operations needed
 2. Provide a clear technical breakdown: what model/library to use, what parameters to set
